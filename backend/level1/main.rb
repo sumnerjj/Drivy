@@ -12,8 +12,8 @@ rentals.each do |rental|
 	id = rental["id"]
 	car_id = rental["car_id"]
 	distance = rental["distance"]
-	start_date =  DateTime.parse(rentals[0]["start_date"]).to_date
-	end_date =  DateTime.parse(rentals[0]["end_date"]).to_date
+	start_date =  DateTime.parse(rental["start_date"]).to_date
+	end_date =  DateTime.parse(rental["end_date"]).to_date
 
 	period = (end_date - start_date + 1).to_i
 	ppd = cars[car_id -1]["price_per_day"]
